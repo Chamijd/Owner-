@@ -4,49 +4,6 @@ const { cmd, commands } = require('../command')
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 var { updateCMDStore,isbtnID,getCMDStore,getCmdForCmdId,connectdb,input,get, updb,updfb } = require("../lib/asitha")
 cmd({
-    pattern: "apply",
-    react: "🛡️",
-    alias: ["add",'set'],
-    desc: "desc2",
-    category: "owner",
-    use: '.apply <Text>',
-    filename: __filename
-},
-async(conn, mek, m, { from, prefix, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
-if (!isMe) return await reply("Owner only")
-if(!q) return reply("Please give me text")
-  
-const ownerdata = (await axios.get('https://raw.githubusercontent.com/athulakumara604/ASITHA-MD-DATABASE/refs/heads/main/ditels/ditels.json')).data
-            let LOGO = ownerdata.imageurl;
-            let BTN = ownerdata.button;
-            let FOOTER = ownerdata.footer;
-            let BTNURL = ownerdata.buttonurl;
-            let HEADER = ownerdata.header;
-  
-const buttons = [
-  {buttonId: prefix + 'prefix ' + q,buttonText: {displayText: ' SET PREFIX'}, type: 1},
-  {buttonId: prefix + 'alivemessage ' + q, buttonText: {displayText: ' ALIVE MESSAGE'}, type: 1},
-  {buttonId: prefix + 'newsjid ' + q, buttonText: {displayText: ' AUTO NEWS SEND'}, type: 1}
-]
-
-let desc = `*「 APPLY PANEL 」*
-*Input :* ${q}`
-
-const buttonMessage = {
-    image: { url:`${LOGO}`},
-    caption: desc,
-    footer: FOOTER,
-    buttons: buttons,
-    headerType: 3
-}
-return await conn.buttonMessage(from, buttonMessage, mek)
-} catch (e) {
-console.log(e)
-reply(e)
-}
-})
-cmd({
     pattern: "setting",
     react: "🛡️",
     alias: ["settings",'botsetting'],
