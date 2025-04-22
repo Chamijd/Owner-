@@ -43,7 +43,7 @@ cmd({
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363354023106228@newsletter',
+                newsletterJid: '120363395257960673@newsletter',
                 newsletterName: config.OWNER_NAME,
                 serverMessageId: 143
             }
@@ -55,7 +55,7 @@ cmd({
                 return await conn.sendMessage(
                     from,
                     {
-                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/7zfdcq.jpg' },
+                        image: { url: config.MENU_IMAGE_URL || 'https://i.ibb.co/5XNzHkVp/3908.jpg' },
                         caption: menuCaption,
                         contextInfo: contextInfo
                     },
@@ -76,7 +76,7 @@ cmd({
             try {
                 await new Promise(resolve => setTimeout(resolve, 1000)); // Small delay after image
                 await conn.sendMessage(from, {
-                    audio: { url: 'https://github.com/XdTechPro/KHAN-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
+                    audio: { url: 'https://github.com/Chamamd/Fill-md/raw/refs/heads/main/Hint%20its%20Kids%20Song.mp3' },
                     mimetype: 'audio/mp4',
                     ptt: true,
                 }, { quoted: mek });
@@ -423,7 +423,7 @@ cmd({
                                 await conn.sendMessage(
                                     senderID,
                                     {
-                                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/7zfdcq.jpg' },
+                                        image: { url: config.MENU_IMAGE_URL || 'https://i.ibb.co/5XNzHkVp/3908.jpg' },
                                         caption: selectedMenu.content,
                                         contextInfo: contextInfo
                                     },
