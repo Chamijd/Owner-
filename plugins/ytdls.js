@@ -29,7 +29,9 @@ cmd({
             return reply("Failed to fetch the video. Please try again later.");
         }
 
-        let ytmsg = `📹 *Video Details*
+        let ytmsg = `📹 *Video👋 *HELLO* ${pushname}
+🌍 *Your Location:* ${location}
+⏰ *Current Time:* ${userTime}
 🎬 *Title:* ${yts.title}
 ⏳ *Duration:* ${yts.timestamp}
 👀 *Views:* ${yts.views}
@@ -37,8 +39,8 @@ cmd({
 🔗 *Link:* ${yts.url}
 
 *Choose download format:*
-1. 📄 Document (no preview)
-2. ▶️ Normal Video (with preview)
+1️⃣. 📄 Document (no preview)
+2️⃣. ▶️ Normal Video (with preview)
 
 _Reply to this message with 1 or 2 to download._`;
 
@@ -47,7 +49,7 @@ _Reply to this message with 1 or 2 to download._`;
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363395257960673@newsletter',
+                newsletterJid: '120363419192353625@newsletter',
                 newsletterName: '☈☟𝗖𝗛𝗔𝗠𝗔 𝗠𝗗',
                 serverMessageId: 143
             }
@@ -66,7 +68,7 @@ _Reply to this message with 1 or 2 to download._`;
                 replyMsg.message.extendedTextMessage.contextInfo &&
                 replyMsg.message.extendedTextMessage.contextInfo.stanzaId === videoMsg.key.id
             ) {
-                await conn.sendMessage(from, { react: { text: "⬇️", key: replyMsg.key } });
+                await conn.sendMessage(from, { react: { text: "📥", key: replyMsg.key } });
 
                 switch (selected) {
                     case "1":
@@ -130,6 +132,9 @@ cmd({
         }
         
         let ytmsg = `🎵 *Song Details*
+👋 *HELLO* ${pushname}
+🌍 *Your Location:* ${location}
+⏰ *Current Time:* ${userTime}
 🎶 *Title:* ${yts.title}
 ⏳ *Duration:* ${yts.timestamp}
 👀 *Views:* ${yts.views}
@@ -137,9 +142,9 @@ cmd({
 🔗 *Link:* ${yts.url}
 
 *Choose download format:*
-1. 📄 MP3 as Document
-2. 🎧 MP3 as Audio (Play)
-3. 🎙️ MP3 as Voice Note (PTT)
+1️⃣. 📄 MP3 as Document
+2️⃣. 🎧 MP3 as Audio (Play)
+3️⃣. 🎙️ MP3 as Voice Note (PTT)
 
 _Reply with 1, 2 or 3 to this message to download the format you prefer._`;
         
@@ -148,7 +153,7 @@ _Reply with 1, 2 or 3 to this message to download the format you prefer._`;
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363395257960673@newsletter',
+                newsletterJid: '120363419192353625@newsletter',
                 newsletterName: '☈☟𝗖𝗛𝗔𝗠𝗔 𝗠𝗗',
                 serverMessageId: 143
             }
@@ -173,7 +178,7 @@ _Reply with 1, 2 or 3 to this message to download the format you prefer._`;
                 ) {
                 
                             
-                   await conn.sendMessage(from, { react: { text: "⬇️", key: mp3msg.key } });
+                   await conn.sendMessage(from, { react: { text: "📥", key: mp3msg.key } });
 
                     switch (selectedOption) {
 case "1":   
