@@ -33,7 +33,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363395257960673@newsletter',
+                    newsletterJid: '120363419192353625@newsletter',
                     newsletterName: '☈☟𝗖𝗛𝗔𝗠𝗔 𝗠𝗗',
                     serverMessageId: 143
                 }
