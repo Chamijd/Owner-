@@ -4,7 +4,7 @@ const { sleep } = require("../lib/functions");
 cmd({
     pattern: "restart",
     alias: ["re"],
-    desc: "Restart the bot JawadYTX",
+    desc: "Restart the bot",
     category: "owner",
     filename: __filename
 },
@@ -21,7 +21,7 @@ async (conn, mek, m, {
         const { exec } = require("child_process");
 
         // Initial reply before restarting
-        const initialMessage = await reply("🔄 *Restarting the bot...* Please wait...");
+        const initialMessage = await reply("🔄 *Restarting the chama-md bot...* _Please wait..._");
         
         // Sleep for a short delay before restarting the bot
         await sleep(1500);
@@ -38,7 +38,7 @@ async (conn, mek, m, {
             }
 
             // Edit the message to indicate that the restart was successful
-            initialMessage.edit("✅ *Bot restarted successfully!* 🎉");
+            initialMessage.edit("✅ _*CHAMA-MD Bot restarted successfully!*_ 🎉");
         });
 
     } catch (e) {
