@@ -29,9 +29,7 @@ cmd({
             return reply("Failed to fetch the video. Please try again later.");
         }
 
-        let ytmsg = `📹 *Video👋 *HELLO* ${pushname}
-🌍 *Your Location:* ${location}
-⏰ *Current Time:* ${userTime}
+        let ytmsg = `📹 *Video Details*
 🎬 *Title:* ${yts.title}
 ⏳ *Duration:* ${yts.timestamp}
 👀 *Views:* ${yts.views}
@@ -132,9 +130,6 @@ cmd({
         }
         
         let ytmsg = `🎵 *Song Details*
-👋 *HELLO* ${pushname}
-🌍 *Your Location:* ${location}
-⏰ *Current Time:* ${userTime}
 🎶 *Title:* ${yts.title}
 ⏳ *Duration:* ${yts.timestamp}
 👀 *Views:* ${yts.views}
