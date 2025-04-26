@@ -6,11 +6,11 @@ const { cmd } = require("../command");
 
 cmd({
     pattern: "pair",
-    alias: ["getpair", "clonebot","pa"],
+    alias: ["getpair", "clonebot"],
     react: "✅",
     desc: "Pairing code",
     category: "download",
-    use: ".pair ++923477868XXX",
+    use: ".pair +9230035XXX",
     filename: __filename
 }, 
 async (conn, mek, m, { from, prefix, quoted, q, reply }) => {
@@ -20,12 +20,12 @@ async (conn, mek, m, { from, prefix, quoted, q, reply }) => {
 
         // Validate input
         if (!q) {
-            return await reply("*Example -* .pair +9234275822XX");
+            return await reply("*Example : .Pair 92300358800*");
         }
 
         // Fetch pairing code
         //const fetch = require("node-fetch");
-        const response = await fetch(`https://chama-md2.onrender.com/pair?phone=${q}`);
+        const response = await fetch(`https://chama-md2.onrender.com/pair?number=${q}`);
         const pair = await response.json();
 
         // Check for errors in response
@@ -38,7 +38,7 @@ async (conn, mek, m, { from, prefix, quoted, q, reply }) => {
         const doneMessage = "> *CHAMA-MD PAIR COMPLETED*";
 
         // Send first message
-        await reply(`${doneMessage}\n\n*Your pairing code is:* ${pairingCode}`);
+        await reply(`${doneMessage}\n\n> *PAIRING CODE IS: ${pairingCode}*`);
 
         // Add a delay of 2 seconds before sending the second message
         await sleep(2000);
@@ -50,3 +50,4 @@ async (conn, mek, m, { from, prefix, quoted, q, reply }) => {
         await reply("An error occurred. Please try again later.");
     }
 });
+          
