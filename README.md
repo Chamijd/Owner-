@@ -32,7 +32,7 @@
 
 Start by forking this repository to your own GitHub account. Click the button below to fork:
 
-  <a href="https://github.com/lakaofc/laka-md/fork"><img title="CHAMA-MD" src="https://img.shields.io/badge/FORK-LAKA,MD-h?color=blue&style=for-the-badge&logo=stackshare"></a>
+  <a href="https://github.com/lakaofc/laka-md/fork"><img title="CHAMA-MD" src="https://img.shields.io/badge/FORK-CHAMA,MD-h?color=blue&style=for-the-badge&logo=stackshare"></a>
   
 ### 2. Get Session ID 
 
